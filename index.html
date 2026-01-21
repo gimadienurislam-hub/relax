@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Школьный калькулятор</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="calculator">
+      <header class="calculator__header">
+        <p class="calculator__eyebrow">Математика для школы</p>
+        <h1 class="calculator__title">Школьный калькулятор</h1>
+        <p class="calculator__subtitle">
+          Сложение, вычитание, умножение и деление с подсказками.
+        </p>
+      </header>
+
+      <section class="calculator__card">
+        <div class="calculator__inputs">
+          <label class="calculator__field">
+            <span>Первое число</span>
+            <input type="number" id="firstNumber" placeholder="Например, 12" />
+          </label>
+          <label class="calculator__field">
+            <span>Второе число</span>
+            <input type="number" id="secondNumber" placeholder="Например, 8" />
+          </label>
+        </div>
+
+        <div class="calculator__actions" role="group" aria-label="Операции">
+          <button type="button" data-operation="+">Сложить</button>
+          <button type="button" data-operation="-">Вычесть</button>
+          <button type="button" data-operation="*">Умножить</button>
+          <button type="button" data-operation="/">Разделить</button>
+        </div>
+
+        <div class="calculator__result" aria-live="polite">
+          <p class="calculator__result-label">Результат</p>
+          <p class="calculator__result-value" id="resultValue">Введите числа</p>
+          <p class="calculator__hint" id="resultHint">
+            Выберите операцию, чтобы увидеть объяснение.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
