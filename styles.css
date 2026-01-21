@@ -1,0 +1,144 @@
+:root {
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+  color: #1b1b1f;
+  background-color: #f5f7fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+}
+
+.calculator {
+  max-width: 720px;
+  width: 100%;
+  display: grid;
+  gap: 24px;
+}
+
+.calculator__header {
+  text-align: center;
+}
+
+.calculator__eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 12px;
+  color: #6b6f76;
+  margin-bottom: 8px;
+}
+
+.calculator__title {
+  margin: 0;
+  font-size: 32px;
+}
+
+.calculator__subtitle {
+  margin: 8px 0 0;
+  color: #4f5561;
+}
+
+.calculator__card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(15, 25, 55, 0.12);
+  padding: 28px;
+  display: grid;
+  gap: 24px;
+}
+
+.calculator__inputs {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.calculator__field {
+  display: grid;
+  gap: 6px;
+  font-size: 14px;
+  color: #2b2f35;
+}
+
+.calculator__field input {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid #d0d6e2;
+  font-size: 16px;
+}
+
+.calculator__field input:focus {
+  outline: 2px solid #7c9bff;
+  border-color: transparent;
+}
+
+.calculator__actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+}
+
+.calculator__actions button {
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  background: #0f62fe;
+  color: #ffffff;
+  font-size: 15px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.calculator__actions button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(15, 98, 254, 0.2);
+}
+
+.calculator__actions button:active {
+  transform: translateY(0);
+}
+
+.calculator__result {
+  background: #f4f6ff;
+  border-radius: 16px;
+  padding: 20px;
+  display: grid;
+  gap: 8px;
+}
+
+.calculator__result-label {
+  margin: 0;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #6b6f76;
+}
+
+.calculator__result-value {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.calculator__hint {
+  margin: 0;
+  color: #4f5561;
+}
+
+@media (max-width: 480px) {
+  .calculator__card {
+    padding: 20px;
+  }
+
+  .calculator__title {
+    font-size: 26px;
+  }
+}
